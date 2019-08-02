@@ -9,20 +9,23 @@ import DecimalToHexadecimal
 import BinarioToDecimal
 import Capicua
 import unittest
+import NumeroFeliz
 class Mensajes:
     def textoAtras(texto):
         textoDecimal=str(texto)
         textoBinario=str(BinarioToDecimal.BinarioDecimal.binarioDos(int(texto)))
         textoHexadecimal=str(DecimalToHexadecimal.DecimalHexadecimal.hexa(int(texto)))
         Capicuas=Capicua.Capicua.NumeroCapicua(texto)
-        textoCompleto='atrás: ' +textoDecimal+'\nBinario: '+textoBinario+'\nHexadecimal: '+textoHexadecimal+'\nCapicua: '+Capicuas
+        textoFeliz=NumeroFeliz.NumeroFeliz.esNumeroFeliz(texto)
+        textoCompleto='atrás: ' +textoDecimal+'\nBinario: '+textoBinario+'\nHexadecimal: '+textoHexadecimal+'\nCapicua: '+Capicuas+'\nNUMERO FELIZ: '+textoFeliz
         return textoCompleto
     def textoSiguiente(texto):
         textoDecimal=str(texto)
         textoBinario=str(BinarioToDecimal.BinarioDecimal.binarioDos(int(texto)))
         textoHexadecimal=str(DecimalToHexadecimal.DecimalHexadecimal.hexa(int(texto)))
         Capicuas=Capicua.Capicua.NumeroCapicua(texto)
-        textoCompleto='Siquiente: ' +textoDecimal+'\nBinario: '+textoBinario+'\nHexadecimal: '+textoHexadecimal+'\nCapicua: '+Capicuas
+        textoFeliz=NumeroFeliz.NumeroFeliz.esNumeroFeliz(texto)
+        textoCompleto='Siquiente: ' +textoDecimal+'\nBinario: '+textoBinario+'\nHexadecimal: '+textoHexadecimal+'\nCapicua: '+Capicuas+'\nNUMERO FELIZ: '+textoFeliz
         return textoCompleto
 class Test(unittest.TestCase):
  def test_sum(self):
